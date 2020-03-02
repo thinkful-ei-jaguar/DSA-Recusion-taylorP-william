@@ -8,7 +8,6 @@ const countingSheep = (num) => {
   console.log('Another sheep jumps over the fence')
   countingSheep(num-1)
 }
-countingSheep(3);
 
 //Power calculator
 
@@ -22,3 +21,13 @@ const pow = (x, n) => {
   }
 }
 
+//Reverse String
+const reverseString = (str) => {
+  if(!str.length) {
+    return "";
+  }
+  let newStr = str[0]
+  return reverseString(str.slice(1)) + newStr
+}
+
+reverseString('taylor');
