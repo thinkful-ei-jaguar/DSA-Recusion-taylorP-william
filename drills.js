@@ -61,3 +61,22 @@ const fib = n => n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
 //factorial
 
 const factorial = num => num === 1 ? 1 : num * factorial(num-1);
+
+//anagrams
+
+const anagram = str => {
+  let perms = [];
+  
+  if (str.length === 1) {
+    return [str];
+  }
+  for (let i = 0; i < str.length; i++) {
+    let pre = str.substring(0, i);
+    let post = str.substring(i + 1);
+    let results = anagram(pre + post);
+    for (let j = 0; j < results.length; j++) {
+      perms.push(str[i] + results[j]);
+    }
+  }
+  return perms;
+};
