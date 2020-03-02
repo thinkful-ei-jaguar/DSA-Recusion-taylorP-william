@@ -56,14 +56,6 @@ const splitter = (str, char) => {
 
 //fib
 
-const fib = (n, x = [1, 1]) => {
-  
-  if (x.length === n) {
-    return x[x.length - 1];
-  } else {
-    return fib(n, ...[x + x[x.length - 1]])
-  }
- 
-}
+const fib = n => n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
 
-console.log(fib(7))
+//
