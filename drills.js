@@ -54,3 +54,16 @@ const splitter = (str, char) => {
   return [firstPart, ...splitter(str.slice(split+1), char)]
 }
 
+//fib
+
+const fib = (n, x = [1, 1]) => {
+  
+  if (x.length === n) {
+    return x[x.length - 1];
+  } else {
+    return fib(n, ...[x + x[x.length - 1]])
+  }
+ 
+}
+
+console.log(fib(7))
