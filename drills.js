@@ -80,3 +80,78 @@ const anagram = str => {
   }
   return perms;
 };
+
+//org chart
+const chart = [
+  'Zuckerberg',[
+    'Schroepfer',
+    [
+      'Bosworth',
+        [
+          'Steve',
+          'Kyle',
+          'Andra'
+        ],
+      'Zhao',
+        [
+          'Richie',
+          'Sofia',
+          'Jen'
+        ]
+    ],
+    'Schrage',
+    [
+      'VanDyck',
+        [
+          'Sabrina',
+          'Michelle',
+          'Josh'
+        ],
+      'Swain',
+        [
+          'Blanch',
+          'Tom',
+          'Joe'
+        ]
+    ],
+    'Sandberg',
+    [
+      'Goler', 
+        [
+          'Eddie',
+          'Julie',
+          'Annie'
+        ],
+      'Hernandez',
+         [
+          'Rowi',
+          'Inga',
+          'Morgan'
+         ],
+      'Moissinac', 
+         [
+           'Amy',
+           'Chuck',
+           'Vinni'
+         ],
+      'Kelley', 
+         [
+           'Eric',
+           'Ana',
+           'Wes'
+         ]
+    ]
+]
+]
+
+const orgChart = (arr) => {
+  if(!arr.length){
+    return [];
+  }
+  const next =  arr[0]
+  const rest = arr.slice(1)
+  console.log(next)
+  return [next, ...orgChart(rest)]
+}
+
+orgChart(chart)
