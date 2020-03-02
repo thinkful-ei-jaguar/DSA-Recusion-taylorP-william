@@ -32,11 +32,24 @@ const reverseString = (str) => {
 
 reverseString('taylor');
 
+//triangle thingy
+
 const triNth = (n, x = 1) => {
   if(n === x ) {
     return x;
   } else {
     return x + triNth(n, x + 1);
   }
+}
+
+//string splitter
+
+const splitter = (str) => {
+  if(!str.length) {
+    return []
+  }
+  let split = str.indexOf(isNaN)
+  let firstPart = str.slice(0, split)
+  return [firstPart, ...splitter(str.slice(split))]
 }
 
