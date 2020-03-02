@@ -31,3 +31,12 @@ const reverseString = (str) => {
 }
 
 reverseString('taylor');
+
+const triNth = (n, x = 1) => {
+  if(n === x ) {
+    return x;
+  } else {
+    return x + triNth(n, x + 1);
+  }
+}
+
