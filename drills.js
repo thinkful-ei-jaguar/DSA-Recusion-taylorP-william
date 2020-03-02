@@ -44,12 +44,13 @@ const triNth = (n, x = 1) => {
 
 //string splitter
 
-const splitter = (str) => {
-  if(!str.length) {
-    return []
+const splitter = (str, char) => {
+  if(str.indexOf(char) === -1) {
+    return [str]
   }
-  let split = str.indexOf(isNaN)
+  let split = str.indexOf(char)
   let firstPart = str.slice(0, split)
-  return [firstPart, ...splitter(str.slice(split))]
+  // console.log(str.slice(split+1))
+  return [firstPart, ...splitter(str.slice(split+1), char)]
 }
 
