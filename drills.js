@@ -58,4 +58,6 @@ const splitter = (str, char) => {
 
 const fib = n => n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
 
-//
+//factorial
+
+const factorial = num => num === 1 ? 1 : num * factorial(num-1);
